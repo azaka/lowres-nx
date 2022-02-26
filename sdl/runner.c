@@ -41,7 +41,7 @@ void runner_init(struct Runner *runner)
     struct Core *core = calloc(1, sizeof(struct Core));
     if (core)
     {
-        core_init(core);
+        core_init2(core);
         
         runner->coreDelegate.context = runner;
         runner->coreDelegate.interpreterDidFail = interpreterDidFail;
@@ -62,7 +62,7 @@ void runner_deinit(struct Runner *runner)
 {
     if (runner->core)
     {
-        core_deinit(runner->core);
+        core_deinit2(runner->core);
         
         free(runner->core);
         runner->core = NULL;

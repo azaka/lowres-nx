@@ -35,7 +35,7 @@ const char CoreInputKeyUp = 20;
 void core_handleInput(struct Core *core, struct CoreInput *input);
 
 
-void core_init(struct Core *core)
+void core_init2(struct Core *core)
 {
     memset(core, 0, sizeof(struct Core));
     
@@ -60,7 +60,7 @@ void core_init(struct Core *core)
     disk_init(core);
 }
 
-void core_deinit(struct Core *core)
+void core_deinit2(struct Core *core)
 {
     itp_deinit(core);
     disk_deinit(core);

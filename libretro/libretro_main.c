@@ -254,7 +254,7 @@ RETRO_API void retro_init(void)
     core = calloc(1, sizeof(struct Core));
     if (core)
     {
-        core_init(core);
+        core_init2(core);
         
         coreDelegate.interpreterDidFail = interpreterDidFail;
         coreDelegate.diskDriveWillAccess = diskDriveWillAccess;
